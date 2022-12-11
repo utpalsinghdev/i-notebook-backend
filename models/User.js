@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 
+//*******************userSchema *************//
 const UserSchema = new Schema({
   name: {
     type: string,
