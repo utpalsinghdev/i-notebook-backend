@@ -32,7 +32,7 @@ router.post(
           .json({ error: "Sorry the user with this email is already exists" });
       }
 
-      //Create a new user
+      //Create a new user with encryption credentials
 
       const salt = await bcrypt.genSalt(10);
       secPass = await bcrypt.hash(req.body.password, salt);
