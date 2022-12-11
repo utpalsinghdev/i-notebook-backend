@@ -1,4 +1,4 @@
-const  mongoose =  require("mongoose");
+const mongoose = require("mongoose");
 const { Schema } = mongoose;
 //*******************userSchema *************//
 const UserSchema = new Schema({
@@ -16,8 +16,9 @@ const UserSchema = new Schema({
   },
   date: {
     type: Date,
-    default: Date.now
+    default: Date.now,
   },
 });
-
-module.exports = mongoose.model('user', UserSchema);
+const User = mongoose.model("User", UserSchema);
+User.createIndexes();
+module.exports = mongoose.model("user", UserSchema);
